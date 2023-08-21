@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/line-revup-2022-liff-line-bot-handson/static/css/main.8cdb21b7.css",
+    "main.js": "/line-revup-2022-liff-line-bot-handson/static/js/main.1111c098.js",
+    "static/js/787.339c55b4.chunk.js": "/line-revup-2022-liff-line-bot-handson/static/js/787.339c55b4.chunk.js",
+    "index.html": "/line-revup-2022-liff-line-bot-handson/index.html",
+    "main.8cdb21b7.css.map": "/line-revup-2022-liff-line-bot-handson/static/css/main.8cdb21b7.css.map",
+    "main.1111c098.js.map": "/line-revup-2022-liff-line-bot-handson/static/js/main.1111c098.js.map",
+    "787.339c55b4.chunk.js.map": "/line-revup-2022-liff-line-bot-handson/static/js/787.339c55b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8cdb21b7.css",
+    "static/js/main.1111c098.js"
+  ]
+}
