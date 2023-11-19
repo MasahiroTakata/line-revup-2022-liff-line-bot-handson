@@ -12,12 +12,14 @@ function App() {
   const [liffState, setLiffState] = useState([null, false]);
   useEffect(() => {
     liff
-      .init({ liffId: process.env.REACT_APP_LIFF_ID })
+      .init({ liffId: process.env.REACT_APP_LIFF_ID }) // 初期化
       .then(() => {
-        const isLogin = liff.isLoggedIn()
+        const isLogin = liff.isLoggedIn() // ログインしているかの確認
         if(isLogin) {
-          liff.getProfile().then((profile) => {
+          liff.getProfile().then((profile) => { // プロフィール情報を取得
+            // createMicroCmsClientは、TypeScriptで用意されている関数っぽい
             const microCmsClient = createMicroCmsClient({ serviceDomain: process.env.REACT_APP_MICRO_CMS_SERVICE_DOMAIN, apiKey: process.env.REACT_APP_MICRO_CMS_API_KEY });
+            // フォームを作成している
             microCmsClient.create({
               endpoint: 'liff',
               content: {
@@ -42,18 +44,18 @@ function App() {
       <h1>Welcome to my app</h1>
       { !isLogin && '未ログイン' }
       { isLogin && 'ログイン' }
-      { isLogin ?
+      { isLogin ? // 三項演算子
         <LogoutButton
           liffObject={liffObject}
           logout={(() => {
             liffObject.logout()
-            setLiffState([liff, false]);
+            setLiffState([liff, false]); // falseでログアウトボタン
           })}/> :
         <LoginButton
           liffObject={liffObject}
           login={(() => {
             liffObject.login().then(() => {
-              setLiffState([liff, true]);
+              setLiffState([liff, true]); // trueでログインボタン
             })
           })}
         />

@@ -57,7 +57,7 @@ export const EditForm = ({liffObject, isLogin}) => {
             .then((res) => console.log(res.id))
             .catch((err) => console.error(err));
         }}>
-          submit
+          送信
         </button>
       </div>
     </div>
